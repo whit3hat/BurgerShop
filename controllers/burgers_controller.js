@@ -10,6 +10,14 @@ router.get('/', function(req, res) {
     res.redirect('/burgers');
 });
 
+//route to burgers
+router.get('/burgers', function(req, res) {
+    //callback response by calling all burgers
+    burger.all(function(burgerData) {
+        res.render('index', { burger_data: burgerData });
+    });
+});
+
 //api routers
 router.post('/api/burgers', function(req, res) {
     burger.create([
