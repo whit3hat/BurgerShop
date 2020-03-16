@@ -19,14 +19,13 @@ router.get('/burgers', function(req, res) {
 });
 
 //api routers
-router.post('/api/burgers', function(req, res) {
-    burger.create([
-        'name', 'devour'
-    ], [
-        req.body.name, req.body.devour
-    ], function(result) {
+
+//post route
+router.post('/burgers/create', function(req, res) {
+    burger.create(req.body.name, function(result) {
         //send back the id of the new route
-        res.json({ id: result.insertId });
+       console.log(result);
+       res.redirect('/');
     });
 });
 
