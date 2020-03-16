@@ -20,7 +20,7 @@ router.get('/burgers', function(req, res) {
 
 //api routers
 
-//post route
+//post route redirect to index
 router.post('/burgers/create', function(req, res) {
     burger.create(req.body.name, function(result) {
         //send back the id of the new route
@@ -29,20 +29,13 @@ router.post('/burgers/create', function(req, res) {
     });
 });
 
+//put route 
 router.put('/api/burgers/:id', function(req, res) {
-    var status = 'id = ' + rq.params.id;
+    burger.update(req.params.id, function(result) {
 
-    console.log('status', status);
+        console.log(result);
 
-    burger.update({
-        devour: req.body.devour
-    }, condition, function(result) {
-        if (result.changedRows == 0) {
-
-            return res.status(404).end();
-        } else {
             res.status(200).end();
-        }
     });
 });
 

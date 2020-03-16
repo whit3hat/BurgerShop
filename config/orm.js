@@ -34,6 +34,9 @@ function printQuestionMarks(num) {
         cb(result);
       });
     },
+
+/* vals is the array of values we will save to the columns
+    cols are the columns we want to insert the values into */
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
   
