@@ -1,6 +1,6 @@
-var exporess = require('express');
+var express = require('express');
 
-var router = exporess.Router();
+var router = express.Router();
 //import the model burger.js to use the database functions
 var burger = require('../models/burger.js');
 
