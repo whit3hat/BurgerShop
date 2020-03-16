@@ -22,7 +22,7 @@ router.get('/burgers', function(req, res) {
 
 //post route redirect to index
 router.post('/burgers/create', function(req, res) {
-    burger.create(req.body.name, function(result) {
+    burger.create(req.body.burger_name, function(result) {
         //send back the id of the new route
        console.log(result);
        res.redirect('/');
