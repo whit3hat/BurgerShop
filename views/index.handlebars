@@ -24,12 +24,12 @@
               {{/unless}}
             {{/each}}
         </div>
-
  </div>
-    <div class='col-md-6 text-center' class='task'>
+
+    <div class='col-md-6 text-center mt-5' class='task'>
         {{#each burger_data}}
            {{#if this.devoured}}
-                <input class='form-control' type='text' placeholders='{{this.id}} , {{this.burger_name}}' readonly>
+                <input class='form-control' type='text' placeholder='{{this.id}} . {{this.burger_name}}' readonly>
             {{/if}}
          {{/each}}   
         </div>
