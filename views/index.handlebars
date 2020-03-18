@@ -1,11 +1,11 @@
 <div class='container'>
     <div class='row'>
         <div class='col-md-12 text-center' id='top-bar'>
-            <img src='/BurgerShop/public/assets/img/' alt='burger' />
+            <img src='./assets/img/burger.jpeg' alt='burger'/>
                 <h1>Eat-Da-Burgers</h1>
         </div>
         <div class='col-md-6 text-center' class='task'>
-            <div clas='row'>
+            <div class='row'>
                 {{#each burger_data}}
                     {{#unless this.devoured}}
                     <div class='col-md-9 text-center'>
@@ -29,7 +29,7 @@
     <div class='col-md-6 text-center' class='task'>
         {{#each burger_data}}
            {{#if this.devoured}}
-                <input class='form-contrl' type='text' placeholders='{{this.id}} , {{this.burger_name}}' readonly>
+                <input class='form-control' type='text' placeholders='{{this.id}} , {{this.burger_name}}' readonly>
             {{/if}}
          {{/each}}   
         </div>
