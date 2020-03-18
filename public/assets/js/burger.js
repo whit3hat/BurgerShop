@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
     console.log('ready!');
 ​
@@ -11,7 +11,7 @@ $(document).ready(function(){
         // pass the id of the clicked buger to update it
         $.ajax({
             method: "PUT",
-            url: `/burgers/${burger_id}`
+            url: '/burgers/' + burger_id
         }).then(function(data){
 ​
             location.reload();
